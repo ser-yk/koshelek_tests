@@ -2,10 +2,9 @@ import pytest
 from pages.main_page import MainPage
 
 
-
 @pytest.mark.parametrize('link', ["https://coinmarketcap.com"])
 class TestSwitchLanguage:
-    @pytest.mark.skip
+
     def test_change_language_button_is_present_on_page(self, browser, link):
         page = MainPage(browser, link)
         page.open()
